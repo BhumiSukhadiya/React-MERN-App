@@ -8,20 +8,11 @@ class HomePage extends Component {
     if (localStorage.getItem('token') !== null) {
       browserHistory.push('/userhome');
     }
-    /* if (localStorage.getItem('token')== null) {
-     alert('Please login to view Homepage');
-     browserHistory.push('/login');
-     }else{
-     console.log('yrrrrrr');
-     }
-     }*/
   }
 
   render() {
     return (
-      <div style={{ padding: 100 }}>
-        <h1>HomePage</h1>
-
+        <div style={{padding: "20px"}}>
         <Banner
           align="center"
           backgroundImage="https://d262ilb51hltx0.cloudfront.net/max/2000/1*DZwdGMaeu-rvTroJYui6Uw.jpeg"
@@ -29,101 +20,10 @@ class HomePage extends Component {
           <Heading
             level={2}
             size={0}
-          >
-            <img src="./images/loading_image.gif" alt="title" width="200px" height="200px" />
+          >HomePage
           </Heading>
         </Banner>
 
-        <Switch
-          mr={2}
-          onClick={function () {
-          }}
-        />
-        <ButtonCircle title="Like">
-          Test
-        </ButtonCircle>
-        <Table
-          data={[
-            [
-              'Hamburger',
-              'Beef',
-              'Onion',
-              'Bun',
-            ],
-            [
-              'Pizza',
-              'Pork',
-              'Tomato',
-              'Crust',
-            ],
-            [
-              'Corndog',
-              'Pork',
-              'Corn',
-              'Cornbread',
-            ],
-            [
-              'Hot Dog',
-              'Pork',
-              'Peppers',
-              'Bun',
-            ],
-          ]}
-          headings={[
-            'Name',
-            'Meat',
-            'Vegetable',
-            'Carb',
-          ]}
-        />
-
-        <br />
-        <div width="200px">
-          <form>
-            <Input
-              name="input"
-              label="Input"
-            />
-            <Select
-              name="select"
-              label="Select"
-
-              options={[
-                { value: 2, children: 'Two' },
-                { value: 4, children: 'Four' },
-                { value: 8, children: 'Eight' },
-                { value: 16, children: 'Sixteen' },
-                { value: 32, children: 'Thirty-Two' },
-                { value: 64, children: 'Sixty-Four' },
-                { value: 128, children: 'One Hundred Twenty-Eight' },
-                { value: 256, children: 'Two Hundred Fifty-Six' },
-              ]}
-            />
-            <Radio
-              name="radio1"
-              value="radio1"
-              label="Radio 1"
-            />
-            <Radio
-              name="radio1"
-              value="radio2"
-              label="Radio 2"
-            />
-            <Textarea
-              name="textarea"
-              label="Textarea"
-            />
-            <Checkbox
-              mb={2}
-              name="checkbox"
-              label="Checkbox"
-            />
-            <Button children="Hello" />
-            <Space />
-            <Button theme="secondary" children="Nope" />
-          </form>
-        </div>
-        <br />
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt sollicitudin nibh quis volutpat.
           Quisque et pulvinar mi. Maecenas luctus finibus magna, quis blandit risus consectetur at. Quisque molestie
           orci nibh, nec feugiat turpis finibus vel. Proin gravida ut libero eget suscipit. Ut eleifend egestas nisl id
