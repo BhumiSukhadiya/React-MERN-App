@@ -5,26 +5,31 @@ import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import DevTools from './components/DevTools';
 import Header from './components/Header/Header';
+import UserHeader from '../User/components/UserHeader';
 import Footer from './components/Footer/Footer';
-
+import {setToken} from '../Authentication/AuthenticationAction'
 export class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { isMounted: false };
+      this.state = {isMounted: false, auth: null};
   }
 
-  componentDidMount() {
-    // console.log(localStorage.getItem('token'));
-     //this.props.dispatch(setToken(localStorage.getItem('token')));
+    componentDidMount() {
+        this.setState({isMounted: true});
+        const authToken = localStorage.getItem('token');
+        console.log(authToken);
+        if (authToken !== null) {
+            this.props.dispatch(setToken(authToken));
+            this.setState({
+                auth: true
+            });
 
-    this.setState({isMounted: true}); // eslint-disable-line
-    /* if(this.checkAuth()){
-      this.props.dispatch(setToken(localStorage.getItem('token')));
-    }else{
-      browserHistory.push('/login');
-    }*/
-  }
-
+        } else {
+            this.setState({
+                auth: false
+            });
+        }
+    }
 
   render() {
     return (
@@ -46,7 +51,7 @@ export class App extends Component {
               },
             ]}
           />
-          <Header />
+            {this.state.auth ? <UserHeader/> : <Header/>}
           <div>
             {this.props.children}
           </div>
