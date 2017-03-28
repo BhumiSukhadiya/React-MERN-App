@@ -33,7 +33,6 @@
   "dependencies": {
     "axios": "^0.15.3",
     "babel-core": "^6.9.1",
-    "basscss": "^8.0.3",
     "body-parser": "^1.15.1",
     "compression": "^1.6.2",
     "cross-env": "^1.0.8",
@@ -45,15 +44,13 @@
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-helmet": "^3.1.0",
-    "react-owl-carousel": "^0.14.0",
+    "react-intl": "^2.1.2",
     "react-redux": "^4.4.5",
     "react-router": "^2.4.1",
     "rebass": "^0.3.4",
     "redux": "^3.5.2",
-    "redux-router": "^2.1.2",
     "redux-thunk": "^2.1.0",
-    "sanitize-html": "^1.11.4",
-    "url-loader": "^0.5.8"
+    "sanitize-html": "^1.11.4"
   },
   "devDependencies": {
     "ava": "^0.15.2",
@@ -107,9 +104,9 @@
     "style-loader": "^0.13.1",
     "supertest": "^1.2.0",
     "url-loader": "^0.5.7",
-    "webpack": "^2.1.0-beta.8",
+    "webpack": "2.1.0-beta.8",
     "webpack-dev-middleware": "^1.6.1",
-    "webpack-dev-server": "^2.4.2",
+    "webpack-dev-server": "^2.1.0-beta.0",
     "webpack-externals-plugin": "^1.0.0",
     "webpack-hot-middleware": "^2.10.0",
     "webpack-manifest-plugin": "^1.0.1"
